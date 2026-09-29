@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biodata dan portofolio Resty Amylia Margareta">
+  <title>Resty Amylia Margareta — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --pink: #FE5BAC;
+      --pink-dark: #dc3e8f;
+      --pink-pale: #fff0f7;
+      --ink: #242126;
+      --muted: #77717a;
+      --cream: #fffafc;
+      --white: #ffffff;
+      --line: #eadde5;
+      --soft: #f8f2f6;
+      --shadow: 0 20px 60px rgba(61, 31, 49, .09);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: var(--sans);
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrap {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* ---------- NAVIGATION ---------- */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 250, 252, .88);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(234, 221, 229, .8);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -.4px;
+    }
+
+    .logo span {
+      color: var(--pink);
+    }
+
+    .menu {
+      display: flex;
+      gap: 23px;
+      align-items: center;
+    }
+
+    .menu a {
+      font-size: .82rem;
+      color: var(--muted);
+      position: relative;
+    }
+
+    .menu a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      left: 0;
+      bottom: -5px;
+      background: var(--pink);
+      transition: width .25s ease;
+    }
+
+    .menu a:hover {
+      color: var(--ink);
+    }
+
+    .menu a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      padding: 70px 0 90px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--pink-dark);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: .72rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: var(--pink);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 7vw, 6.8rem);
+      font-weight: 600;
+      line-height: .96;
+      letter-spacing: -4px;
+      margin: 0 0 27px;
+    }
+
+    .hero h1 em {
+      color: var(--pink);
+      font-style: italic;
+    }
+
+    .hero-desc {
+      color: var(--muted);
+      max-width: 555px;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 100px;
+      font-size: .84rem;
+      font-weight: 700;
+      transition: .25s ease;
+      border: 1px solid var(--ink);
+    }
+
+    .btn-main {
+      background: var(--ink);
+      color: white;
+    }
+
+    .btn-main:hover {
+      background: var(--pink);
+      border-color: var(--pink);
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      border-color: var(--line);
+      background: white;
+    }
+
+    .btn-light:hover {
+      border-color: var(--pink);
+      color: var(--pink-dark);
+      transform: translateY(-2px);
+    }
+
+    .portrait-area {
+      position: relative;
+      min-height: 560px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .portrait-frame {
+      width: min(390px, 78%);
+      height: 490px;
+      position: relative;
+      background: var(--pink-pale);
+      border-radius: 190px 190px 18px 18px;
+      padding: 12px;
+      box-shadow: var(--shadow);
+      transform: rotate(2deg);
+    }
+
+    .portrait-frame::before {
+      content: "";
+      position: absolute;
+      inset: -16px;
+      border: 1px solid var(--pink);
+      border-radius: 200px 200px 25px 25px;
+      z-index: -1;
+      transform: rotate(-5deg);
+      opacity: .55;
+    }
+
+    .portrait {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 180px 180px 12px 12px;
+      background: #f5e6ee;
+    }
+
+    .initials {
+      position: absolute;
+      inset: 12px;
+      border-radius: 180px 180px 12px 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, #fff1f7, #f8dce9);
+      color: var(--pink);
+      font-family: var(--serif);
+      font-size: 5rem;
+      font-weight: 600;
+    }
+
+    .portrait-caption {
+      position: absolute;
+      right: 2%;
+      bottom: 40px;
+      padding: 13px 17px;
+      background: white;
+      box-shadow: var(--shadow);
+      font-size: .76rem;
+      letter-spacing: .7px;
+    }
+
+    .portrait-caption strong {
+      color: var(--pink-dark);
+    }
+
+    /* ---------- GENERAL SECTIONS ---------- */
+    section {
+      padding: 100px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 35px;
+      margin-bottom: 45px;
+    }
+
+    .section-number {
+      color: var(--pink);
+      font-family: var(--serif);
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .section-heading h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 600;
+      line-height: 1.1;
+      margin: 0 0 12px;
+      letter-spacing: -1.5px;
+    }
+
+    .section-heading p {
+      max-width: 680px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ---------- MOTIVATION ---------- */
+    .motivation {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .big-word {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: .9;
+      color: var(--pink-pale);
+      -webkit-text-stroke: 1px var(--pink);
+      margin: 0;
+    }
+
+    .motivation-text {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2.4vw, 2rem);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .motivation-text::first-letter {
+      color: var(--pink);
+      font-size: 1.8em;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skill-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 65px;
+    }
+
+    .skill-intro {
+      color: var(--muted);
+    }
+
+    .skill-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .skill-row {
+      padding: 19px 0;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .skill-name {
+      font-weight: 600;
+    }
+
+    .skill-level {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .pill {
+      padding: 5px 11px;
+      border-radius: 50px;
+      background: var(--pink-pale);
+      color: var(--pink-dark);
+      font-size: .7rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #e7dce2;
+    }
+
+    .dot.active {
+      background: var(--pink);
+    }
+
+    /* ---------- PROJECT ---------- */
+    .project {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      min-height: 380px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .project-side {
+      background: var(--pink);
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-code {
+      font-family: monospace;
+      font-size: .78rem;
+      opacity: .85;
+    }
+
+    .project-side h3 {
+      font-family: var(--serif);
+      font-size: 2.6rem;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    .project-main {
+      padding: 50px;
+    }
+
+    .project-main p {
+      color: var(--muted);
+    }
+
+    .project-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 30px 0;
+    }
+
+    .project-info div {
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .project-info small {
+      display: block;
+      color: var(--muted);
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .project-info strong {
+      font-size: .9rem;
+    }
+
+    /* ---------- COMMITS ---------- */
+    .commit-grid {
+      display: grid;
+      grid-template-columns: 1fr .85fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .proof-box {
+      min-height: 300px;
+      border: 1px dashed #d8c4ce;
+      background: var(--soft);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 35px;
+      color: var(--muted);
+    }
+
+    .commit-proof {
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    .terminal-box {
+      background: #27222a;
+      color: #f9eaf2;
+      padding: 25px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font: .8rem/1.7 "Courier New", monospace;
+      box-shadow: var(--shadow);
+    }
+
+    .terminal-box .pink {
+      color: #ff82bb;
+    }
+
+    /* ---------- EDUCATION ---------- */
+    .education {
+      border-top: 1px solid var(--line);
+    }
+
+    .edu-item {
+      display: grid;
+      grid-template-columns: 180px 1fr 160px;
+      gap: 25px;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+    }
+
+    .edu-year {
+      color: var(--pink-dark);
+      font-weight: 700;
+      font-size: .85rem;
+    }
+
+    .edu-school {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      line-height: 1.2;
+    }
+
+    .edu-major {
+      color: var(--muted);
+      text-align: right;
+      font-size: .86rem;
+    }
+
+    /* ---------- IDENTITY ---------- */
+    .identity-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+    }
+
+    .identity-name {
+      font-family: var(--serif);
+      font-size: 3rem;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    .identity-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--line);
+    }
+
+    .identity-item {
+      padding: 22px 18px 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .identity-item:nth-child(even) {
+      padding-left: 18px;
+      border-left: 1px solid var(--line);
+    }
+
+    .identity-item small {
+      color: var(--muted);
+      display: block;
+      margin-bottom: 4px;
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .identity-item strong {
+      font-size: .9rem;
+    }
+
+    /* ---------- DESIGN / THEME ---------- */
+    .theme-board {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    .theme-tile {
+      min-height: 190px;
+      padding: 28px;
+      border-right: 1px solid var(--line);
+      position: relative;
+    }
+
+    .theme-tile:last-child {
+      border-right: 0;
+    }
+
+    .swatch {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-bottom: 22px;
+    }
+
+    .swatch-pink { background: var(--pink); }
+    .swatch-ink { background: var(--ink); }
+    .swatch-cream { background: var(--cream); border: 1px solid var(--line); }
+
+    .theme-tile h3 {
+      font-family: var(--serif);
+      margin-bottom: 7px;
+    }
+
+    .theme-tile p {
+      color: var(--muted);
+      font-size: .82rem;
+      margin: 0;
+    }
+
+    .design-copy {
+      margin-top: 30px;
+      color: var(--muted);
+      max-width: 780px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      padding: 65px 0 40px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .footer-title {
+      font-family: var(--serif);
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: 22px 0;
+    }
+
+    .footer-links a {
+      color: var(--pink-dark);
+      font-size: .82rem;
+      border-bottom: 1px solid transparent;
+    }
+
+    .footer-links a:hover {
+      border-color: var(--pink);
+    }
+
+    .copyright {
+      color: var(--muted);
+      font-size: .72rem;
+    }
+
+    code {
+      color: var(--pink-dark);
+      background: var(--pink-pale);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 850px) {
+      .hero-grid,
+      .motivation,
+      .skill-layout,
+      .project,
+      .commit-grid,
+      .identity-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .portrait-area {
+        min-height: 480px;
+      }
+
+      .portrait-frame {
+        height: 430px;
+      }
+
+      .section-heading {
+        grid-template-columns: 70px 1fr;
+        gap: 20px;
+      }
+
+      .edu-item {
+        grid-template-columns: 140px 1fr;
+      }
+
+      .edu-major {
+        grid-column: 2;
+        text-align: left;
+      }
+
+      .theme-board {
+        grid-template-columns: 1fr;
+      }
+
+      .theme-tile {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .theme-tile:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .wrap {
+        width: 88%;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .nav {
+        min-height: 62px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 15vw, 4.7rem);
+        letter-spacing: -2.5px;
+      }
+
+      .portrait-area {
+        min-height: 410px;
+      }
+
+      .portrait-frame {
+        width: 78%;
+        height: 390px;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+
+      .section-heading {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .section-number {
+        font-size: 2rem;
+      }
+
+      .skill-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .skill-level {
+        justify-content: space-between;
+      }
+
+      .project-side,
+      .project-main {
+        padding: 30px;
+      }
+
+      .project-side h3 {
+        font-size: 2.1rem;
+      }
+
+      .project-info {
+        grid-template-columns: 1fr;
+      }
+
+      .edu-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .edu-major {
+        grid-column: auto;
+      }
+
+      .identity-name {
+        font-size: 2.3rem;
+      }
+
+      .identity-list {
+        grid-template-columns: 1fr;
+      }
+
+      .identity-item,
+      .identity-item:nth-child(even) {
+        padding-left: 0;
+        border-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="topbar">
+    <div class="wrap nav">
+      <a href="#" class="logo">Resty<span>.</span></a>
+      <nav class="menu" aria-label="Navigasi utama">
+        <a href="#motivasi">Tentang</a>
+        <a href="#skill">Skill</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a href="#identitas">Profil</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Student · Informatics · 069_Resty</div>
+        <h1>Resty<br><em>Amylia</em><br>Margareta.</h1>
+        <p class="hero-desc">
+          Mahasiswa S1 Informatika yang sedang membangun kemampuan di bidang teknologi
+          melalui proses belajar, tugas kuliah, dan proyek sederhana. Saya percaya
+          bahwa kemampuan yang baik dibangun dari keberanian untuk terus mencoba.
+        </p>
+
+        <div class="hero-links">
+          <a href="#proyek" class="btn btn-main">Lihat proyek</a>
+          <a href="https://github.com/069_Resty" class="btn btn-light" target="_blank" rel="noopener">
+            GitHub ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="portrait-area">
+        <div class="portrait-frame">
+          <img
+            src="assets/profile.jpg"
+            alt="Foto profil Resty Amylia Margareta"
+            class="portrait"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+          >
+          <div class="initials" style="display:none;">RM</div>
+        </div>
+
+        <div class="portrait-caption">
+          <strong>2024—now</strong><br>
+          S1 Informatika · UNIRA
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 01 MOTIVASI -->
+    <section id="motivasi">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="section-number">01</div>
+          <div>
+            <h2>Motivasi Hidup</h2>
+            <p>Alasan yang membuat saya terus belajar dan berkembang.</p>
+          </div>
+        </div>
+
+        <div class="motivation">
+          <h3 class="big-word">keep<br>going.</h3>
+          <p class="motivation-text">
+            Saya ingin berkembang menjadi seseorang yang mampu membuat sistem yang
+            bermanfaat dan bisa digunakan untuk menyelesaikan masalah nyata.
+            Saya ingin membangun kemampuan teknologi secara bertahap agar setelah
+            lulus Informatika saya memiliki bekal untuk bekerja di bidang yang saya minati.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 SKILL -->
+    <section id="skill">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="section-number">02</div>
+          <div>
+            <h2>Kemampuan Teknologi</h2>
+            <p>
+              Kemampuan yang sudah pernah saya gunakan dalam proses belajar,
+              tugas, dan latihan.
+            </p>
+          </div>
+        </div>
+
+        <div class="skill-layout">
+          <div class="skill-intro">
+            <p>
+              Saya masih berada dalam tahap pengembangan kemampuan. Karena itu,
+              tingkat yang dicantumkan dibuat sesuai pengalaman yang benar-benar saya miliki.
+            </p>
+            <p>
+              Teknologi yang belum cukup saya kuasai saya masukkan ke bagian
+              <strong>Sedang dipelajari</strong>.
+            </p>
+          </div>
+
+          <div class="skill-list">
+            <div class="skill-row">
+              <div class="skill-name">HTML / CSS</div>
+              <div class="skill-level">
+                <div class="dots">
+                  <i class="dot active"></i><i class="dot"></i><i class="dot"></i>
+                </div>
+                <span class="pill">Pemula</span>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-name">JavaScript</div>
+              <div class="skill-level">
+                <div class="dots">
+                  <i class="dot active"></i><i class="dot"></i><i class="dot"></i>
+                </div>
+                <span class="pill">Pemula</span>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-name">PHP Native</div>
+              <div class="skill-level">
+                <div class="dots">
+                  <i class="dot active"></i><i class="dot"></i><i class="dot"></i>
+                </div>
+                <span class="pill">Pemula</span>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-name">Git / GitHub</div>
+              <div class="skill-level">
+                <div class="dots">
+                  <i class="dot active"></i><i class="dot"></i><i class="dot"></i>
+                </div>
+                <span class="pill">Pemula</span>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-name">Bootstrap 5</div>
+              <div class="skill-level">
+                <div class="dots">
+                  <i class="dot active"></i><i class="dot"></i><i class="dot"></i>
+                </div>
+                <span class="pill">Pemula</span>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-name">Leaflet</div>
+              <div class="skill-level">
+                <div class="dots">
+                  <i class="dot active"></i><i class="dot"></i><i class="dot"></i>
+                </div>
+                <span class="pill">Sedang dipelajari</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 PROYEK -->
+    <section id="proyek">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="section-number">03</div>
+          <div>
+            <h2>Proyek yang Telah Dibuat</h2>
+            <p>Proyek yang benar-benar saya kerjakan selama proses belajar.</p>
+          </div>
+        </div>
+
+        <article class="project">
+          <div class="project-side">
+            <div class="project-code">PROJECT / P1</div>
+            <h3>My Profile<br>— Portfolio.</h3>
+            <div>2026 · HTML · CSS · Git</div>
+          </div>
+
+          <div class="project-main">
+            <p>
+              <strong>My Profile</strong> adalah portofolio biodata pribadi berbasis
+              HTML dan CSS yang dibuat sebagai latihan pertama dalam tugas
+              Pemrograman Platform. Website ini berisi biodata, kemampuan teknologi,
+              proyek, riwayat pendidikan, dan bukti proses pengembangan.
+            </p>
+
+            <div class="project-info">
+              <div>
+                <small>Peran</small>
+                <strong>Perancang & Pengembang</strong>
+              </div>
+              <div>
+                <small>Teknologi</small>
+                <strong>HTML · CSS · GitHub</strong>
+              </div>
+            </div>
+
+            <a href="https://github.com/069_Resty" class="btn btn-main"
+               target="_blank" rel="noopener">
+              Buka repository ↗
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 04 COMMIT -->
+    <section id="commit">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="section-number">04</div>
+          <div>
+            <h2>Bukti Commit</h2>
+            <p>
+              Riwayat commit digunakan sebagai bukti bahwa website dikerjakan
+              melalui proses pengembangan bertahap.
+            </p>
+          </div>
+        </div>
+
+        <div class="commit-grid">
+          <div>
+            <img
+              src="assets/commit-proof.png"
+              alt="Screenshot halaman commits repository My Profile"
+              class="commit-proof"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            >
+
+            <div class="proof-box" style="display:none;">
+              <div>
+                <strong>Tambahkan screenshot Commit di sini</strong>
+                <p>
+                  Simpan screenshot halaman Commits GitHub sebagai
+                  <code>assets/commit-proof.png</code>.
+                  Pastikan minimal tiga commit terlihat.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3>Riwayat pekerjaan</h3>
+            <p style="color:var(--muted);">
+              Setelah melakukan commit pada repository, jalankan perintah berikut
+              di terminal untuk mengambil lima commit terakhir.
+            </p>
+
+            <pre class="terminal-box"><code><span class="pink">$</span> git log --oneline -5
+
+GANTI DENGAN HASIL GIT LOG ASLI
+commit-1  update tampilan website
+commit-2  menambahkan data biodata
+commit-3  membuat struktur awal</code></pre>
+
+            <p style="margin-top:20px;">
+              <a href="https://github.com/069_Resty"
+                 target="_blank" rel="noopener"
+                 style="color:var(--pink-dark);font-weight:700;">
+                github.com/069_Resty ↗
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 PENDIDIKAN -->
+    <section id="pendidikan">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="section-number">05</div>
+          <div>
+            <h2>Riwayat Pendidikan</h2>
+            <p>Disusun dari pendidikan terbaru hingga pendidikan sebelumnya.</p>
+          </div>
+        </div>
+
+        <div class="education">
+          <div class="edu-item">
+            <div class="edu-year">2024 — sekarang</div>
+            <div class="edu-school">Universitas Madura (UNIRA)</div>
+            <div class="edu-major">
+              S1 Informatika<br>
+              <strong>Semester 5</strong>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-year">2021 — 2024</div>
+            <div class="edu-school">SMK — Rekayasa Perangkat Lunak</div>
+            <div class="edu-major">
+              RPL<br>
+              <strong>Peringkat 2</strong>
+            </div>
+          </div>
+        </div>
+
+        <p style="color:var(--muted);font-size:.78rem;margin-top:18px;">
+          Pastikan nama lengkap SMK dan tahun pendidikan disesuaikan dengan biodata
+          resmi yang digunakan pada GitHub.
+        </p>
+      </div>
+    </section>
+
+    <!-- 06 IDENTITAS -->
+    <section id="identitas">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="section-number">06</div>
+          <div>
+            <h2>Identitas Pribadi</h2>
+            <p>Informasi dasar yang diperlukan untuk biodata tanpa mencantumkan data sensitif.</p>
+          </div>
+        </div>
+
+        <div class="identity-layout">
+          <div>
+            <p style="color:var(--pink-dark);font-size:.75rem;text-transform:uppercase;letter-spacing:2px;">
+              Profile
+            </p>
+            <h3 class="identity-name">Resty<br>Amylia<br>Margareta.</h3>
+          </div>
+
+          <div class="identity-list">
+            <div class="identity-item">
+              <small>Nama panggilan</small>
+              <strong>Resty / Rere</strong>
+            </div>
+
+            <div class="identity-item">
+              <small>NIM</small>
+              <strong>2024520010</strong>
+            </div>
+
+            <div class="identity-item">
+              <small>Program studi</small>
+              <strong>S1 Informatika</strong>
+            </div>
+
+            <div class="identity-item">
+              <small>Perguruan tinggi</small>
+              <strong>Universitas Madura</strong>
+            </div>
+
+            <div class="identity-item">
+              <small>Lokasi</small>
+              <strong>Pamekasan, Jawa Timur</strong>
+            </div>
+
+            <div class="identity-item">
+              <small>GitHub</small>
+              <strong>
+                <a href="https://github.com/069_Resty" target="_blank" rel="noopener">
+                  069_Resty ↗
+                </a>
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 TAMPILAN -->
+    <section id="tampilan">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="section-number">07</div>
+          <div>
+            <h2>Tampilan Modern & Menarik</h2>
+            <p>Desain dibuat untuk tetap nyaman dibaca pada laptop maupun smartphone.</p>
+          </div>
+        </div>
+
+        <div class="theme-board">
+          <div class="theme-tile">
+            <div class="swatch swatch-pink"></div>
+            <h3>Accent</h3>
+            <p>Pink utama <strong>#FE5BAC</strong> digunakan sebagai identitas visual.</p>
+          </div>
+
+          <div class="theme-tile">
+            <div class="swatch swatch-ink"></div>
+            <h3>Typography</h3>
+            <p>Playfair Display untuk judul dan DM Sans untuk isi agar elegan tetapi tetap terbaca.</p>
+          </div>
+
+          <div class="theme-tile">
+            <div class="swatch swatch-cream"></div>
+            <h3>Layout</h3>
+            <p>Editorial layout, whitespace, garis tipis, dan responsive design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 TEMA -->
+    <section id="tema">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="section-number">08</div>
+          <div>
+            <h2>Tema Tampilan yang Konsisten</h2>
+            <p>Identitas visual yang digunakan dari halaman awal sampai footer.</p>
+          </div>
+        </div>
+
+        <div class="motivation">
+          <h3 class="big-word">soft<br>tech.</h3>
+
+          <div>
+            <p style="font-family:var(--serif);font-size:1.4rem;line-height:1.6;margin-top:0;">
+              Saya memilih tema <strong>Editorial Minimalis — Soft Tech</strong>
+              karena ingin menggabungkan kesan elegan dengan identitas sebagai
+              mahasiswa Informatika.
+            </p>
+
+            <p style="color:var(--muted);">
+              Palet utama menggunakan pink <strong>#FE5BAC</strong>, putih/ivory,
+              dan charcoal. Motif garis editorial, angka besar pada setiap bagian,
+              tipografi serif, serta aksen pink digunakan secara konsisten untuk
+              membuat tampilan berbeda dari template dashboard atau terminal biasa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-title">Made with <span style="color:var(--pink);">♥</span> by Resty.</div>
+
+      <p style="color:var(--muted);font-size:.82rem;">
+        Dibuat dengan ♥ oleh 069_Resty — P1 Pemrograman Platform
+      </p>
+
+      <div class="footer-links">
+        <a href="https://github.com/069_Resty" target="_blank" rel="noopener">
+          Repository GitHub ↗
+        </a>
+
+        <!-- GANTI # DENGAN LINK VIDEO TUGAS -->
+        <a href="#" title="Ganti dengan tautan video tugas">
+          Video Tugas ↗
+        </a>
+      </div>
+
+      <div class="copyright">
+        © 2026 Resty Amylia Margareta · Universitas Madura
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
